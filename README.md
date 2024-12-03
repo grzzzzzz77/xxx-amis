@@ -119,3 +119,17 @@ https://fontawesome.com/v6/search?o=r&m=free
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=iceqing/react-amis-admin&type=Date)](https://star-history.com/#iceqing/react-amis-admin&Date)
+
+{
+  "type": "page",
+  "title": "data",
+  "body": [],
+  "id": "u:ea9914ec4da4",
+  "asideResizor": false,
+  "pullRefresh": {
+    "disabled": true
+  },
+  "regions": [
+    "body"
+  ]
+}

@@ -112,6 +112,64 @@ export default class Admin extends React.Component<AdminProps, any> {
     }
   };
 
+  getDefaultStore = () => {
+    return {
+      pages: [{
+        id: "1",
+        icon: "fa fa-file",
+        path: "hello-world",
+        label: "Hello world",
+        schema: {
+          type: "page",
+          title: "Hello world",
+          body: [{
+            type: "tpl",
+            tpl: "初始页面",
+            wrapperComponent: "",
+            inline: false,
+            id: "u:7bb61f49d46e"
+          }],
+          id: "u:567af2554224",
+          asideResizor: false,
+          pullRefresh: {
+            disabled: true
+          }
+        }
+      }],
+      theme: "cxd",
+      asideFixed: true,
+      asideFolded: false,
+      offScreen: false,
+      addPageIsOpen: false,
+      preview: false,
+      isMobile: false,
+      schema: {
+        type: "page",
+        title: "Hello world",
+        body: [{
+          type: "tpl",
+          tpl: "初始页面",
+          wrapperComponent: "",
+          inline: false,
+          id: "u:7bb61f49d46e"
+        }],
+        id: "u:567af2554224",
+        asideResizor: false,
+        pullRefresh: {
+          disabled: true
+        }
+      }
+    };
+  };
+
+  handleEditorClick = () => {
+    const newWindow = window.open('', '_blank');
+    if (newWindow) {
+      newWindow.location.href = 'https://aisuda.github.io/amis-editor-demo/#/edit/0';
+      newWindow.localStorage.setItem('aaa', JSON.stringify(this.getDefaultStore()));
+    }
+  };
+
   renderHeader() {
     const store = this.props.store;
 
@@ -133,7 +191,7 @@ export default class Admin extends React.Component<AdminProps, any> {
           </button>
           <div className={`cxd-Layout-brand`}>
             <i className="fa fa-paw"></i>
-            <span className="hidden-folded m-l-sm">react-amis-admin</span>
+            <span className="hidden-folded m-l-sm">grzzzzzzzzz</span>
           </div>
         </div>
         <div className={`cxd-Layout-headerBar`}>
@@ -153,6 +211,12 @@ export default class Admin extends React.Component<AdminProps, any> {
           </div>
 
           <div className="m-l-auto hidden-xs pull-right pt-2" >
+            <Button 
+              className="mr-2"
+              onClick={this.handleEditorClick}
+            >
+              编辑器
+            </Button>
             <Dropdown menu={{ items }} placement="bottomLeft" trigger={['click', 'hover']}>
               <Button>
                 <Space>

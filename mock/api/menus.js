@@ -10,6 +10,16 @@ module.exports = () => {
             label: "Hello",
             icon: "fa fa-gauge",
           },
+          {
+            path: "/demo",
+            label: "Demo",
+            icon: "fa fa-snapchat",
+          },
+          // {
+          //   path: "/data",
+          //   label: "Data",
+          //   icon: "fa fa-gauge",
+          // },
         ],
       },
     ],
